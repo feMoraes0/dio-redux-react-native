@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "commit": "cz"
   },
   "dependencies": {
     "expo": "~43.0.0",
@@ -18,7 +19,14 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@semantic-release/release-notes-generator": "^10.0.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
     "semantic-release": "^18.0.0"
   },
-  "private": true
+  "private": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
