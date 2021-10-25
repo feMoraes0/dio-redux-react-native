@@ -16,7 +16,9 @@
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@semantic-release/release-notes-generator": "^10.0.2",
+    "semantic-release": "^18.0.0"
   },
   "private": true
 }
