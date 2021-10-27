@@ -18,7 +18,19 @@ module.exports = {
   },
   plugins: [
     'react',
+    'prettier',
+    'react-hooks',
+    'jsx-a11y',
+    'import'
   ],
   rules: {
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [
+      'warn', {
+        extensions: ['.jsx', '.js']
+      }
+    ],
+    'import/prefer-default-export': 'off',
+    'no-param-reassign': 'off'
   },
 };
