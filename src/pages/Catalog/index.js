@@ -1,22 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Container } from './styles';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-const Catalog = () => (
-  <View style={styles.container}>
-    <Text>Catalog</Text>
-    <StatusBar />
-  </View>
-);
+const Catalog = () => <Container />;
 
 export default {
   name: 'Catalog',
