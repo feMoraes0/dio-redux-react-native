@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import Header from './components/Header';
 import Catalog from './pages/Catalog';
 
 const { Navigator, Screen } = createNativeStackNavigator();
@@ -21,7 +22,7 @@ const Routes = () => (
         options={{
           headerShown: true,
           headerTransparent: true,
-          header: () => {},
+          headerTitle: () => <Header />,
         }}
       />
     </Navigator>
