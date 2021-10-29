@@ -8,11 +8,21 @@ const { Navigator, Screen } = createNativeStackNavigator();
 
 const Routes = () => (
   <NavigationContainer>
-    <Navigator>
+    <Navigator
+      screenOptions={{
+        headerShown: true,
+        cardStyle: { backgroundColor: '#313746' },
+      }}
+      initialRouteName={Catalog.name}
+    >
       <Screen
         name={Catalog.name}
         component={Catalog.component}
-        options={{ title: 'Catálogo', headerTitleAlign: 'center' }}
+        options={{
+          headerShown: true,
+          headerTransparent: true,
+          header: () => {},
+        }}
       />
     </Navigator>
   </NavigationContainer>
