@@ -4,8 +4,18 @@
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
-    "@semantic-release/changelog",
-    "@semantic-release/git",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md"]
+      }
+    ],
     "@semantic-release/github"
   ],
   "preset": "angular"
