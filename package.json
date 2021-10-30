@@ -44,7 +44,7 @@
     "prettier": "^2.4.1",
     "semantic-release": "^18.0.0"
   },
-  "private": true,
+  "private": false,
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
