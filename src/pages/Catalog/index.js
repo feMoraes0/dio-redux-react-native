@@ -14,6 +14,7 @@ import {
   ProductTitle,
 } from './styles';
 import formatValue from '../../utils/formatValue';
+import FloatingCart from '../../components/FloatingCart';
 
 const Catalog = () => {
   const [products] = useState([
@@ -58,6 +59,7 @@ const Catalog = () => {
           )}
         />
       </ProductContainer>
+      <FloatingCart />
     </Container>
   );
 };
