@@ -4,6 +4,7 @@ import { Feather } from '@expo/vector-icons';
  */
 import React, { useState, useMemo } from 'react';
 import { View } from 'react-native';
+import EmptyCart from '../../components/EmptyCart';
 import formatValue from '../../utils/formatValue';
 import {
   ActionButton,
@@ -26,24 +27,7 @@ import {
 } from './styles';
 
 const Cart = () => {
-  const [products] = useState([
-    {
-      id: '1',
-      title: 'Assinatura Trimestral',
-      image_url:
-        'https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png',
-      price: 150,
-      quantity: 1,
-    },
-    {
-      id: '2',
-      title: 'Assinatura Anual',
-      image_url:
-        'https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/annual_subscription_qyolci.png',
-      price: 540,
-      quantity: 2,
-    },
-  ]);
+  const [products] = useState([]);
 
   const cartSize = useMemo(() => products.length || 0, [products]);
 
@@ -61,6 +45,7 @@ const Cart = () => {
         <ProductList
           data={products}
           keyExtractor={(item) => item.id}
+          ListEmptyComponent={<EmptyCart />}
           ListFooterComponent={<View />}
           ListFooterComponentStyle={{
             height: 80.0,
