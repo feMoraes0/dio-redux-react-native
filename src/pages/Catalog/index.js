@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { View } from 'react-native';
 import {
@@ -13,26 +13,17 @@ import {
   ProductPrice,
   ProductTitle,
 } from './styles';
+import api from '../../services/api';
 import formatValue from '../../utils/formatValue';
 import FloatingCart from '../../components/FloatingCart';
 
 const Catalog = () => {
-  const [products] = useState([
-    {
-      id: '1',
-      title: 'Assinatura Trimestral',
-      image_url:
-        'https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png',
-      price: 150,
-    },
-    {
-      id: '2',
-      title: 'Assinatura Anual',
-      image_url:
-        'https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/annual_subscription_qyolci.png',
-      price: 540,
-    },
-  ]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(async () => {
+    const { data } = await api.get('/products');
+    setProducts(data);
+  }, []);
 
   return (
     <Container>
