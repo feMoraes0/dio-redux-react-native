@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/feMoraes0/dio-redux-react-native/compare/v1.7.0...v1.8.0) (2021-11-11)
+
+
+### Features
+
+* **catalog:** adds new data origin via api connection to catalog page ([0330825](https://github.com/feMoraes0/dio-redux-react-native/commit/0330825cded184edee72efc422028e12512885e8))
+
 # [1.7.0](https://github.com/feMoraes0/dio-redux-react-native/compare/v1.6.0...v1.7.0) (2021-11-10)
 
 
