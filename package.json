@@ -8,7 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "commit": "cz"
+    "commit": "cz",
+    "run-server": "json-server server.json -w"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.5",
